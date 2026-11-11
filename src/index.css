@@ -1,0 +1,77 @@
+@import "tailwindcss";
+
+html {
+  scroll-behavior: smooth;
+}
+
+.nav-link {
+  position: relative;
+}
+
+.nav-link::after {
+  position: absolute;
+  right: 0.4rem;
+  bottom: 0.4rem;
+  left: 0.4rem;
+  height: 2px;
+  border-radius: 9999px;
+  background: var(--color-accent);
+  content: "";
+  transform: scaleX(0);
+  transform-origin: center;
+  transition: transform 220ms ease;
+}
+
+.desktop-nav-link::after {
+  bottom: -0.25rem;
+}
+
+.nav-link:hover::after,
+.nav-link[aria-current="location"]::after {
+  transform: scaleX(1);
+}
+
+
+@media (prefers-reduced-motion: reduce) {
+  .nav-link::after {
+    transition: none;
+  }
+}
+
+@theme {
+  --color-logo: #263c31;
+  --color-bgPrimary: #f5f7f3;
+  --color-bgSurface: #ffffff;
+  --color-textMain: #26332b;
+  --color-textMuted: #68756c;
+  --color-accent: #47785b;
+  --color-accentHover: #315b42;
+  --color-borderLine: #d9e2da;
+  --color-highlight: #c47b55;
+  --color-icon-home: #2f855a;
+  --color-icon-about: #3182ce;
+  --color-icon-skills: #805ad5;
+  --color-icon-projects: #d69e2e;
+  --color-icon-contact: #dd6b55;
+  --font-sans: "DM Sans", sans-serif;
+  --font-display: "DM Serif Display", Georgia, serif;
+}
+
+[data-theme="dark"] {
+  --color-logo: #e4eee5;
+  --color-bgPrimary: #111914;
+  --color-bgSurface: #1b2620;
+  --color-textMain: #edf3ed;
+  --color-textMuted: #aab9ad;
+  --color-accent: #a4c9ad;
+  --color-accentHover: #c0dfc7;
+  --color-borderLine: #35463a;
+  --color-highlight: #e0a07b;
+  --color-icon-home: #68d391;
+  --color-icon-about: #63b3ed;
+  --color-icon-skills: #b794f4;
+  --color-icon-projects: #f6c85f;
+  --color-icon-contact: #fc8181;
+}
+
+
