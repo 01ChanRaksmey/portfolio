@@ -26,6 +26,15 @@ html {
   bottom: -0.25rem;
 }
 
+.hero-cta {
+  transition: transform 200ms ease, box-shadow 200ms ease, background-color 200ms ease, border-color 200ms ease, color 200ms ease;
+}
+
+.hero-cta:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 10px 24px -12px color-mix(in srgb, var(--color-accent) 70%, transparent);
+}
+
 .nav-link:hover::after,
 .nav-link[aria-current="location"]::after {
   transform: scaleX(1);
@@ -33,8 +42,13 @@ html {
 
 
 @media (prefers-reduced-motion: reduce) {
-  .nav-link::after {
+  .nav-link::after,
+  .hero-cta {
     transition: none;
+  }
+
+  .hero-cta:hover {
+    transform: none;
   }
 }
 
