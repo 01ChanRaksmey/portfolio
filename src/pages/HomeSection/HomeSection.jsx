@@ -1,6 +1,6 @@
 
 import { motion, useReducedMotion } from 'motion/react'
-import profileImage from '../../assets/profile-optimized.jpg'
+import profileImage from '../../assets/profile.jpg'
 
 const HomeSection = () => {
   const reduceMotion = useReducedMotion()
@@ -20,9 +20,13 @@ const HomeSection = () => {
             : { duration: 0.90, ease: [0.22, 1, 0.36, 1] }
         }
       >
-        <p className="mb-4 font-sans text-sm font-semibold uppercase tracking-[0.18em] text-accent">
+        <motion.p
+        whileInView={{rotate: -3}}
+        whileHover={{rotate: 0}}
+        transition={{ type: "spring", stiffness: 200, damping: 8 }}
+        className="mb-4 cursor-default select-none font-sans text-lg font-semibold block uppercase tracking-[0.18em] text-accent">
           Hi, I am Raksmey
-        </p>
+        </motion.p>
         <h1 className="font-display text-4xl leading-tight text-logo sm:text-5xl lg:text-6xl">
           I build thoughtful web experiences.
         </h1>
@@ -53,14 +57,14 @@ const HomeSection = () => {
         transition={
           reduceMotion
             ? { duration: 0 }
-            : { duration: 3, delay: 0.2, ease: [0.22, 1, 0.36, 1] }
+            : { duration: 3, delay: 0.3, ease: [0.22, 1, 0.36, 1] }
         }
       >
 
         <img
           src={profileImage}
           alt="Portrait of Raksmey"
-          className=" aspect-4/5 w-full rounded-3xl border border-borderLine object-cover shadow-xl"
+          className="hero-portrait aspect-5/6 w-full select-none rounded-3xl border border-borderLine object-cover"
         />
       </motion.article>
     </section>

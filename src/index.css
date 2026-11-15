@@ -4,6 +4,35 @@ html {
   scroll-behavior: smooth;
 }
 
+.hero-portrait {
+  box-shadow:
+    0 0 34px 5px var(--color-portrait-halo),
+    0 20px 58px -8px var(--color-portrait-shadow);
+}
+
+.typing-cursor {
+  display: inline-block;
+  width: 2px;
+  height: 1em;
+  margin-left: 0.12em;
+  vertical-align: -0.12em;
+  background: currentColor;
+  animation: typing-caret 0.9s steps(2, start) infinite;
+}
+
+@keyframes typing-caret {
+  to {
+    visibility: hidden;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .typing-cursor {
+    animation: none;
+    opacity: 0.55;
+  }
+}
+
 .nav-link {
   position: relative;
 }
@@ -62,6 +91,16 @@ html {
   --color-accentHover: #315b42;
   --color-borderLine: #d9e2da;
   --color-highlight: #c47b55;
+  --color-dragon-body: #4f805c;
+  --color-dragon-outline: #315b42;
+  --color-dragon-detail: #c2d7b5;
+  --color-dragon-eye: #f4f6df;
+  --color-dragon-fire: #df5a2a;
+  --color-dragon-fireMid: #f49a27;
+  --color-dragon-fireCore: #ffe17b;
+  --color-card: #23212c;
+  --color-portrait-shadow: rgb(38 60 49 / 32%);
+  --color-portrait-halo: rgb(71 120 91 / 26%);
   --color-icon-home: #2f855a;
   --color-icon-about: #3182ce;
   --color-icon-skills: #805ad5;
@@ -81,6 +120,15 @@ html {
   --color-accentHover: #c0dfc7;
   --color-borderLine: #35463a;
   --color-highlight: #e0a07b;
+  --color-dragon-body: #6fa77a;
+  --color-dragon-outline: #345b40;
+  --color-dragon-detail: #bad7b4;
+  --color-dragon-fire: #e87549;
+  --color-dragon-fireMid: #f2b563;
+  --color-dragon-fireCore: #ffe4a1;
+  --color-card: #d2c3f6;
+  --color-portrait-shadow: rgb(0 0 0 / 58%);
+  --color-portrait-halo: rgb(164 201 173 / 22%);
   --color-icon-home: #68d391;
   --color-icon-about: #63b3ed;
   --color-icon-skills: #b794f4;

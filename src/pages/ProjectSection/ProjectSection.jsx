@@ -4,7 +4,7 @@ import React from 'react'
 
 const ProjectSection = () => {
   return (
-    <div id="projects">
+    <div id="projects" className="min-h-dvh">
       
     </div>
   )
