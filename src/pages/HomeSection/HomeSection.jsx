@@ -1,6 +1,6 @@
 
 import { motion, useReducedMotion } from 'motion/react'
-import profileImage from '../../assets/profile.jpg'
+import profileImage from '../../assets/blazerr-small.jpg'
 
 const HomeSection = () => {
   const reduceMotion = useReducedMotion()

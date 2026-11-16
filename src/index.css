@@ -11,6 +11,17 @@ html , body {
     0 20px 58px -8px var(--color-portrait-shadow);
 }
 
+.skill-group-card {
+  transition: border-color 200ms ease, box-shadow 200ms ease;
+}
+
+.skill-group-card:hover {
+  border-color: color-mix(in srgb, var(--color-accent) 55%, var(--color-borderLine));
+  box-shadow:
+    0 0 28px color-mix(in srgb, var(--color-accent) 22%, transparent),
+    0 16px 34px -22px color-mix(in srgb, var(--color-accent) 70%, transparent);
+}
+
 .typing-cursor {
   display: inline-block;
   width: 2px;
@@ -92,6 +103,7 @@ html , body {
   --color-accentHover: #315b42;
   --color-borderLine: #d9e2da;
   --color-highlight: #c47b55;
+  --color-Sage: #e9efe8;
   --color-dragon-body: #4f805c;
   --color-dragon-outline: #315b42;
   --color-dragon-detail: #c2d7b5;
@@ -121,12 +133,14 @@ html , body {
   --color-accentHover: #c0dfc7;
   --color-borderLine: #35463a;
   --color-highlight: #e0a07b;
-  --color-dragon-body: #6fa77a;
-  --color-dragon-outline: #345b40;
-  --color-dragon-detail: #bad7b4;
-  --color-dragon-fire: #e87549;
-  --color-dragon-fireMid: #f2b563;
-  --color-dragon-fireCore: #ffe4a1;
+  --color-Sage: #0b0b11;
+  --color-dragon-body: #5a9871;
+  --color-dragon-outline: #254b39;
+  --color-dragon-detail: #c8e1d0;
+  --color-dragon-eye: #fff6cf;
+  --color-dragon-fire: #d46b4e;
+  --color-dragon-fireMid: #eda653;
+  --color-dragon-fireCore: #ffe2a0;
   --color-card: #d2c3f6;
   --color-portrait-shadow: rgb(0 0 0 / 58%);
   --color-portrait-halo: rgb(164 201 173 / 22%);

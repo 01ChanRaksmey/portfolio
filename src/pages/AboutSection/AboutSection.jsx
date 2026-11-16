@@ -33,9 +33,13 @@ const AboutSection = () => {
       id="about" 
       className=" mx-auto max-w-7xl scroll-mt-24 my-15 sm:my-20 md:my-25 px-6  "
     >
-      <h1 className="text-logo text-3xl  md:text-4xl font-mono font-semibold mb-8 sm:mb-12 text-center" >
+      <motion.h1 
+      initial={{opacity:0.25 , y:80}}
+      whileInView={{opacity:1 , y:0}}
+      transition={{duration:1}}
+      className="text-logo text-3xl  md:text-4xl font-mono font-semibold mb-8 sm:mb-12 text-center" >
         ABOUT ME
-      </h1>
+      </motion.h1>
       <article className="mx-auto grid md:grid-cols-2 max-w-5xl" >
         <div className="max-w-2xl">
           <motion.h3
@@ -124,7 +128,7 @@ const AboutSection = () => {
               viewport={{ once: true, amount: 0.45 }}
               transition={{ type: 'spring', stiffness: 55, damping: 16, mass: 1.2 ,duration:3 }}
               viewBox="0 0 320 190"
-              className=" max-w-full w-40 sm:w-60"
+              className="max-w-full w-40 sm:w-60"
               xmlns="http://www.w3.org/2000/svg"
             >
               <g transform="translate(320 0) scale(-1 1)">
@@ -137,8 +141,11 @@ const AboutSection = () => {
               <path d="m119 103 3-12 12 10m18 0 13-13 2 20" fill="var(--color-highlight)" stroke="var(--color-dragon-outline)" strokeWidth="2.5" strokeLinejoin="round" />
               <path d="M165 88c2-18 16-29 34-27 12 1 20 8 23 17l24 4c7 1 8 8 1 11l-24 8c-7 11-23 15-39 11-13-3-21-12-19-24Z" fill="var(--color-dragon-body)" stroke="var(--color-dragon-outline)" strokeWidth="3" strokeLinejoin="round" />
               <path d="m178 64-2-18 16 12m12 4 11-17 2 22" fill="var(--color-highlight)" stroke="var(--color-dragon-outline)" strokeWidth="3" strokeLinejoin="round" />
-              <ellipse cx="205" cy="73" rx="3.5" ry="5" fill="var(--color-dragon-eye)" />
-              <circle cx="206" cy="74" r="1.8" fill="var(--color-logo)" />
+              <ellipse cx="205" cy="73" rx="7" ry="8" fill="var(--color-dragon-outline)" />
+              <ellipse cx="205" cy="73" rx="4.8" ry="6" fill="var(--color-dragon-eye)" />
+              <ellipse cx="207" cy="74" rx="2.2" ry="3.5" fill="var(--color-dragon-outline)" />
+              <circle cx="208" cy="72" r="1.3" fill="var(--color-bgSurface)" />
+              <path d="M196 64c5-4 12-5 18-2" fill="none" stroke="var(--color-dragon-outline)" strokeWidth="2.5" strokeLinecap="round" />
               <path d="M225 91h8" stroke="var(--color-logo)" strokeWidth="2.5" strokeLinecap="round" />
               <path d="M248 83c20-16 25-12 17-1 17-10 25-5 10 5 15-3 18 4 1 9 10 5 4 11-9 6-7-3-13-8-19-13Z" fill="var(--color-dragon-fire)" />
               <path d="M249 87c12-8 16-5 9 2 11-4 14 0 3 4 8 3 4 7-4 3-4-2-6-5-8-9Z" fill="var(--color-dragon-fireMid)" />
