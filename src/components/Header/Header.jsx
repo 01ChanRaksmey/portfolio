@@ -60,7 +60,7 @@ const Header = () => {
   return (
 
 
-    <header className="sticky top-0 z-50 border-b border-borderLine bg-bgPrimary flex justify-between px-3.5 py-3 transition-colors duration-400">
+    <header className="sticky top-0 z-99 border-b border-borderLine bg-bgPrimary flex justify-between px-3.5 py-3 transition-colors duration-400">
       <a href="#home" className="mr-1 font-display text-3xl text-logo sm:mr-5">Portfolio<span className="text-highlight">.</span></a>
 
       <div className="flex items-center gap-2.5 sm:gap-5 md:gap-8">
