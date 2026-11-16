@@ -9,7 +9,7 @@ import SkillSection from './pages/SkillSection/SkillSection'
 
 const App = () => {
   return (
-    <div className="bg-bgPrimary transition-colors duration-100">
+    <div className="bg-bgPrimary transition-colors duration-100 sticky top-0 z-50">
       <Header />
       <main>
         <HomeSection />
