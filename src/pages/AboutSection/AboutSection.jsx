@@ -31,7 +31,7 @@ const AboutSection = () => {
   return (
     <section
       id="about" 
-      className="min-h-dvh mx-auto max-w-7xl scroll-mt-24 my-15 sm:my-20 md:my-25 px-6  "
+      className=" mx-auto max-w-7xl scroll-mt-24 my-15 sm:my-20 md:my-25 px-6  "
     >
       <h1 className="text-logo text-3xl  md:text-4xl font-mono font-semibold mb-8 sm:mb-12 text-center" >
         ABOUT ME
