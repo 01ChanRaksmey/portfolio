@@ -1,4 +1,5 @@
 
+import { useEffect, useState } from 'react'
 import Footer from './components/Footer/Footer'
 import Header from './components/Header/Header'
 import AboutSection from './pages/AboutSection/AboutSection'
@@ -8,14 +9,23 @@ import ProjectSection from './pages/ProjectSection/ProjectSection'
 import SkillSection from './pages/SkillSection/SkillSection'
 
 const App = () => {
+  const [theme, setTheme] = useState(
+    () => localStorage.getItem('theme') || 'light'
+  )
+
+  useEffect(() => {
+    document.documentElement.setAttribute('data-theme', theme)
+    localStorage.setItem('theme', theme)
+  }, [theme])
+
   return (
     <div className="bg-bgPrimary transition-colors duration-">
-      <Header />
+      <Header theme={theme} setTheme={setTheme} />
       <main>
         <HomeSection />
         <AboutSection  />
         <SkillSection />
-        <ProjectSection />
+        <ProjectSection theme={theme} />
         <ContactSection />
       </main>
       <Footer />

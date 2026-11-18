@@ -116,7 +116,7 @@ const AboutSection = () => {
                 >
                   <Icon className="text-3xl" />
                   <p className="font-sans font-bold">{infor.value}</p>
-                  <h4 className="font-bold text-red-600">{infor.label}</h4>
+                  <h4 className="font-bold text-amber-500">{infor.label}</h4>
                 </motion.div>)}
 
                 )}

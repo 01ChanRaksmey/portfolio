@@ -10,19 +10,9 @@ const navLinks = [
   { name: 'Contact', href: '#contact', icon: FiMail, iconColor: 'text-icon-contact' },
 ];
 
-const Header = () => {
-
-
-    // Dark Mode
-  const [theme, setTheme] = useState(
-    () => localStorage.getItem("theme") || "light"
-  );
+const Header = ({ theme, setTheme }) => {
   const [menuOpen, setMenuOpen] = useState(false);
   const [activeSection, setActiveSection] = useState("home");
-  useEffect(() => {
-    document.documentElement.setAttribute("data-theme", theme);
-    localStorage.setItem("theme", theme);
-  }, [theme]);
 
   useEffect(() => {
     const sections = navLinks
@@ -84,7 +74,6 @@ const Header = () => {
           <button
            onClick={() => setTheme(theme === "light" ? "dark" : "light")}
             type="button"
-            aria-label={`Switch to ${theme === "light" ? "dark" : "light"} theme`}
             className="rounded-lg border border-borderLine bg-bgSurface px-2 py-2 text-xl text-textMain transition-colors hover:border-accent hover:text-accent"
           >
             {theme === "light" ? (
