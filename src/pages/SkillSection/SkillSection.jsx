@@ -45,7 +45,7 @@ const skillGroups = [
 const SkillSection = () => {
   return (
     <section id="skills" className="grid place-items-center mx-auto w-full max-w-7xl px-6
-       my-16 sm:my-24 md:my-30 py-8 sm:py-10 md:py-15 bg-Sage rounded-3xl scroll-mt-24"
+       my-16 sm:my-24 md:my-60 py-8 sm:py-10 md:py-15 bg-Sage rounded-3xl scroll-mt-24"
     >
       
 

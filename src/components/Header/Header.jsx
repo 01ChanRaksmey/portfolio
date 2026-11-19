@@ -110,7 +110,7 @@ const Header = ({ theme, setTheme }) => {
                     setActiveSection(link.href.slice(1));
                     setMenuOpen(false);
                   }}
-                  className="nav-link inline-block justify-self-center rounded-lg px-1.5 py-3 font-sans text-sm font-semibold text-accent transition-colors hover:bg-bgPrimary hover:text-accentHover sm:px-3"
+                  className="nav-link inline-block justify-self-center rounded-lg px-1.5 py-3 font-sans text-[12px] sm:text-sm font-semibold text-accent transition-colors hover:bg-bgPrimary hover:text-accentHover sm:px-3"
                 >
                   <Icon aria-hidden="true" className={`mr-1 inline-block align-[-2px] text-base ${link.iconColor} sm:mr-1.5`} />
                   {link.name}

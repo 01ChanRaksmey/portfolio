@@ -19,7 +19,7 @@ const App = () => {
   }, [theme])
 
   return (
-    <div className="bg-bgPrimary transition-colors duration-">
+    <div className="bg-bgPrimary transition-colors duration-500">
       <Header theme={theme} setTheme={setTheme} />
       <main>
         <HomeSection />

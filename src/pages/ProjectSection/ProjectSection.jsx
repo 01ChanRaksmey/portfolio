@@ -36,7 +36,7 @@ const ProjectSection = ({theme}) => {
   return (
     <section
       id="projects"
-      className="mx-auto my-24 max-w-7xl px-6 sm:my-30 md:my-45"
+      className="mx-auto my-24 max-w-7xl px-6 sm:my-30 md:my-60"
     >
       <article>
         <p className="font-sans text-sm font-bold tracking-widest text-accent sm:text-base">
@@ -103,11 +103,11 @@ const ProjectSection = ({theme}) => {
                 }
                 </div>
                 <nav className="flex flex-wrap justify-baseline gap-3 my-2.5 font-sans">
-                  <a href={project.liveUrl} target="blank"
+                  <a href={project.liveUrl} target="_blank" rel="noopener noreferrer"
                   className="flex items-center text-accent hover:underline"
                   >
                     live site<GoArrowUpRight /></a>
-                  <a href={project.githubUrl} target="blank"
+                  <a href={project.githubUrl} target="_blank" rel="noopener noreferrer"
                     className="flex items-center text-accent hover:underline "
                   >
                     Github<HiArrowTopRightOnSquare className="ml-1.5" /></a>

@@ -70,10 +70,10 @@ const AboutSection = () => {
               </>
             )}
           </motion.h3>
-          <p className="text-accent leading-relaxed tracking-tighter font-sans text-sm max-w-md mb-5 text-justify">
-            I enjoy building websites that feel clear, responsive, and easy to use.
-            I am especially interested in front-end development, where I can bring design and problem-solving together.
-            Through each project, I am learning how to turn ideas into thoughtful experiences for the people using them.
+          <p className="text-accent leading-relaxed tracking-tighter font-sans text-sm max-w-md mb-5 ">
+              My name is <strong className="text-logo">Chan Raksmey</strong>. I’m an IT student focused on front-end development. I enjoy turning ideas into responsive, 
+              easy-to-use websites by combining thoughtful design with practical problem-solving. 
+              Each project helps me grow as a developer and create better experiences for the people who use them.
           </p>
           <article className="max-w-full">
             {
