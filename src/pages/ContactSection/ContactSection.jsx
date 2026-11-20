@@ -2,7 +2,7 @@ import { useState } from 'react'
 import { FaCheckCircle } from 'react-icons/fa'
 import { IoIosArrowRoundForward } from "react-icons/io";
 import { MdErrorOutline } from 'react-icons/md'
-import { IoMailOutline, IoLocationOutline, IoBriefcaseOutline } from 'react-icons/io5'
+import { IoMailOutline, IoCallOutline, IoLocationOutline, IoBriefcaseOutline } from 'react-icons/io5'
 import { FaGithub, FaLinkedin } from 'react-icons/fa'
 
 
@@ -61,7 +61,7 @@ const ContactSection = () => {
         >Send me a message and let’s create something useful.</p>
       </article>
       <article
-        className="w-full grid sm:grid-cols-[1.4fr_0.8fr] mx-auto gap-3 border rounded-lg border-borderLine px-2 py-14"
+        className="w-full grid md:grid-cols-[1.4fr_0.8fr] mx-auto gap-3 border rounded-lg border-borderLine px-2 py-14"
       >
         <form action="https://formspree.io/f/mnpdzwaw" method="post" onSubmit={handleSubmit}
           className="px-4"
@@ -121,6 +121,15 @@ const ContactSection = () => {
                   className="break-all text-textMain hover:text-accent"
                 >
                   02chanraksmey@gmail.com
+                </a>
+              </div>
+            </div>
+            <div className="flex items-start gap-3">
+              <IoCallOutline className="mt-1 shrink-0 text-xl text-accent" />
+              <div>
+                <p className="text-sm text-textMuted">Phone</p>
+                <a href="tel:+855968219523" className="text-textMain hover:text-accent">
+                  +855 96 8219 523
                 </a>
               </div>
             </div>

@@ -27,9 +27,20 @@ const Header = ({ theme, setTheme }) => {
 
       observer = new IntersectionObserver(
         (entries) => {
-          entries.forEach((entry) => {
-            if (entry.isIntersecting) setActiveSection(entry.target.id);
-          });
+          const visibleEntries = entries.filter((entry) => entry.isIntersecting);
+          if (visibleEntries.length === 0) return;
+
+          const activeEntry = visibleEntries.sort(
+            (a, b) =>
+              Math.abs(a.boundingClientRect.top - window.innerHeight * 0.3) -
+              Math.abs(b.boundingClientRect.top - window.innerHeight * 0.3)
+          )[0];
+          const sectionId = activeEntry.target.id;
+
+          setActiveSection(sectionId);
+          if (window.location.hash !== `#${sectionId}`) {
+            window.history.replaceState(null, '', `#${sectionId}`);
+          }
         },
         { rootMargin: `-${topMargin}px 0px -${bottomMargin}px 0px` }
       );

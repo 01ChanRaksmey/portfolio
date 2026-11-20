@@ -17,18 +17,6 @@ const projects = [
     liveUrl: "https://dowbicafe.vercel.app",
     githubUrl: "https://github.com/01ChanRaksmey/DowBiCafe",
   },
-  {
-    id:2,
-    title: "DowBi Café",
-    description: "A café website for exploring the menu and making reservations.",
-    images: {
-      light:  cafeDarkImage,
-      dark:cafeLightImage,
-    },
-    technologies: ["React", "Tailwind CSS", "Motion"],
-    liveUrl: "https://dowbicafe.vercel.app",
-    githubUrl: "https://github.com/01ChanRaksmey/DowBiCafe",
-  },
 ];
 
 const ProjectSection = ({theme}) => {
@@ -36,7 +24,7 @@ const ProjectSection = ({theme}) => {
   return (
     <section
       id="projects"
-      className="mx-auto my-24 max-w-7xl px-6 sm:my-30 md:my-60"
+      className="mx-auto my-24 max-w-7xl px-6 sm:my-30 md:my-60 scroll-mt-24"
     >
       <article>
         <p className="font-sans text-sm font-bold tracking-widest text-accent sm:text-base">
@@ -55,13 +43,14 @@ const ProjectSection = ({theme}) => {
           projects.map((project) => (
             <div 
               key={project.id}
-              className="rounded-xl border w-full border-borderLine overflow-hidden shadow-2xl"
+              className="rounded-xl border w-full border-borderLine overflow-hidden shadow-lg select-none"
             >
               {
                 project.images ? (
                   <img src={
                     theme === "dark" ? project.images.dark : project.images.light
                   } 
+                    alt="Screenshot of the DowBi Café website"
                     className="w-full aspect-7/3"
                   />
                 )
